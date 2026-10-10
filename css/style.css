@@ -632,6 +632,11 @@ html.light #siteToast {
    9. MOBILE OPTIMIZATIONS & FLOATING BOTTOM BAR
    ========================================================================== */
 @media (max-width: 768px) {
+  /* Hide the top header contact bar on mobile screens */
+  [data-purpose="top-header-bar"] {
+    display: none !important;
+  }
+
   body {
     padding-bottom: 74px !important; /* Space for the bottom floating bar */
   }
