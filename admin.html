@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>لوحة التحكم والإدارة الشاملة | المستشارة القانونية شهد إبراهيم محرم</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts: Amiri & Cairo -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  
+  <!-- Admin Stylesheet -->
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="bg-[#0A0D12] text-slate-100 antialiased selection:bg-[#C5A880] selection:text-[#0E1217]">
+
+  <div class="min-h-screen flex flex-col lg:flex-row">
+    
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="w-full lg:w-72 bg-[#0E131A] border-b lg:border-b-0 lg:border-l border-[#1F2733] flex flex-col justify-between p-5 z-20">
+      <div class="space-y-6">
+        <!-- Brand Logo & Identity -->
+        <div class="flex items-center gap-3.5 pb-5 border-b border-[#1A222D]">
+          <div class="w-12 h-12 rounded-xl bg-[#151C26] border border-[#C5A880]/30 p-1 flex items-center justify-center flex-shrink-0">
+            <img src="assets/images/logo.png" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCdjliIrU33Qt-UzmhVsRtCR4cdbwOeA93kWTJZRtA7ClJ4MRURUbPISxQ6Oc2Na7hnvOsznKujMe8wiqE9zxq7vvtDgN7LuiRTFZTl-rPNc3374juHw0GJcDJYM1Xv2m6zntwGpIOwDLRTM1xTBMuoX3VDdSE4S-RnC7dTvlj2u1tnpvbML3L296-4THNmDX-bjoONq0KwZknDgZeoDuniSyeIe4XuUoHBcEjhTo8KQyyuzQq5PA9blsPJgsenhx_aZg'" alt="الشعار" class="max-h-full object-contain" style="mix-blend-mode: screen;">
+          </div>
+          <div>
+            <h2 class="font-bold text-sm text-white leading-tight">شهد إبراهيم محرم</h2>
+            <p class="text-[11px] text-[#C5A880] font-medium mt-0.5">لوحة الإدارة والتحكم</p>
+          </div>
+        </div>
+
+        <!-- Navigation Items -->
+        <nav class="space-y-1.5" id="adminSidebarNav">
+          <div class="nav-item active" data-admin-tab="overview">
+            <i class="fa-solid fa-chart-pie text-base w-5"></i>
+            <span>نظرة عامة والطلبات</span>
+          </div>
+
+          <div class="nav-item" data-admin-tab="schedule">
+            <i class="fa-solid fa-calendar-days text-base w-5"></i>
+            <span>أوقات الاستشارات والجدول</span>
+          </div>
+
+          <div class="nav-item" data-admin-tab="branding">
+            <i class="fa-solid fa-paintbrush text-base w-5"></i>
+            <span>الشعار وحجمه والصور</span>
+          </div>
+
+          <div class="nav-item" data-admin-tab="social">
+            <i class="fa-solid fa-share-nodes text-base w-5"></i>
+            <span>روابط التواصل الاجتماعي</span>
+          </div>
+
+          <div class="nav-item" data-admin-tab="testimonials">
+            <i class="fa-solid fa-comments text-base w-5"></i>
+            <span>الموكلين والتقييمات</span>
+          </div>
+
+          <div class="nav-item" data-admin-tab="cases">
+            <i class="fa-solid fa-folder-tree text-base w-5"></i>
+            <span>مسارات قضايا الموكلين</span>
+          </div>
+        </nav>
+      </div>
+
+      <!-- User Profile & Main Site Link -->
+      <div class="pt-5 border-t border-[#1A222D] space-y-3">
+        <a href="index.html" target="_blank" class="w-full py-2.5 px-3 rounded-lg bg-[#141B24] hover:bg-[#1A2432] text-xs font-semibold text-[#C5A880] border border-[#2B3746] flex items-center justify-center gap-2 transition-colors">
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          <span>فتح الموقع الرئيسي للموكلين</span>
+        </a>
+
+        <div class="flex items-center gap-3 p-2 rounded-lg bg-[#121720]">
+          <div class="w-9 h-9 rounded-full bg-[#C5A880]/20 border border-[#C5A880] text-[#C5A880] flex items-center justify-center font-bold text-xs">
+            ش.م
+          </div>
+          <div class="overflow-hidden">
+            <div class="text-xs font-bold text-white truncate">أ. شهد إبراهيم محرم</div>
+            <div class="text-[10px] text-[#C5A880] flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              مستشارة وباحثة (مرتبة الشرف الأولى)
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <main class="flex-1 flex flex-col min-w-0 bg-[#0A0D12]">
+      
+      <!-- Top Bar -->
+      <header class="h-16 bg-[#0E131A] border-b border-[#1F2733] px-6 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span class="text-xs text-slate-400" id="adminLiveClock"></span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button onclick="document.getElementById('addInquiryModal').classList.add('active')" class="btn-gold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow">
+            <i class="fa-solid fa-plus text-xs"></i>
+            <span>إضافة استشارة يدوية</span>
+          </button>
+          
+          <button onclick="exportInquiriesCSV()" class="px-3.5 py-1.5 rounded-lg bg-[#18202A] hover:bg-[#202936] text-slate-200 border border-[#2B3746] text-xs font-semibold flex items-center gap-1.5 transition-colors">
+            <i class="fa-solid fa-file-export text-xs text-[#C5A880]"></i>
+            <span>تصدير CSV</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Scrollable Tab Content Container -->
+      <div class="p-6 sm:p-8 flex-1 overflow-y-auto space-y-6">
+        
+        <!-- ==================== TAB 1: OVERVIEW & INQUIRIES ==================== -->
+        <section id="tab-overview" class="tab-content space-y-6">
+          
+          <!-- Key Metrics Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            <!-- Stat 1 -->
+            <div class="admin-card-stat p-5">
+              <div class="flex items-center justify-between text-slate-400 mb-2">
+                <span class="text-xs font-semibold">إجمالي الطلبات المستلمة</span>
+                <span class="w-8 h-8 rounded-lg bg-[#C5A880]/15 text-[#C5A880] flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-inbox"></i>
+                </span>
+              </div>
+              <div class="text-2xl font-bold text-white font-mono" id="statTotalInquiries">0</div>
+              <div class="text-[11px] text-emerald-400 mt-1 flex items-center gap-1">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <span>نشاط استشاري متزايد</span>
+              </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="admin-card-stat p-5">
+              <div class="flex items-center justify-between text-slate-400 mb-2">
+                <span class="text-xs font-semibold">طلبات جديدة بانتظار الرد</span>
+                <span class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-bell"></i>
+                </span>
+              </div>
+              <div class="text-2xl font-bold text-blue-400 font-mono" id="statNewInquiries">0</div>
+              <div class="text-[11px] text-slate-400 mt-1">تتطلب تواصل سريع عبر واتساب</div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="admin-card-stat p-5">
+              <div class="flex items-center justify-between text-slate-400 mb-2">
+                <span class="text-xs font-semibold">معاملات وقضايا جارية</span>
+                <span class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-spinner"></i>
+                </span>
+              </div>
+              <div class="text-2xl font-bold text-amber-400 font-mono" id="statActiveCases">0</div>
+              <div class="text-[11px] text-slate-400 mt-1">قيد الفحص، الصياغة أو التنفيذ</div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="admin-card-stat p-5">
+              <div class="flex items-center justify-between text-slate-400 mb-2">
+                <span class="text-xs font-semibold">استشارات منجزة ومسلمة</span>
+                <span class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-sm">
+                  <i class="fa-solid fa-circle-check"></i>
+                </span>
+              </div>
+              <div class="text-2xl font-bold text-emerald-400 font-mono" id="statCompleted">0</div>
+              <div class="text-[11px] text-slate-400 mt-1">معدل إنجاز 99%</div>
+            </div>
+          </div>
+
+          <!-- Inquiries Filter & Table Card -->
+          <div class="admin-card p-5 space-y-4">
+            
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <div>
+                <h3 class="font-bold text-base text-white">طلبات الاستشارات الواردة عبر الموقع</h3>
+                <p class="text-xs text-slate-400">إدارة الاستفسارات والتواصل المباشر مع الموكلين عبر الواتساب</p>
+              </div>
+
+              <!-- Search and Filter Controls -->
+              <div class="flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
+                <div class="relative flex-1 sm:w-64">
+                  <input type="text" id="adminGlobalSearch" placeholder="ابحث باسم الموكل أو الخدمة أو الجوال..." class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 pl-9 text-xs text-white placeholder:text-slate-500 focus:border-[#C5A880] focus:outline-none">
+                  <i class="fa-solid fa-magnifying-glass text-slate-500 text-xs absolute left-3 top-3"></i>
+                </div>
+
+                <select id="inquiryStatusFilter" class="bg-[#0E131A] border border-[#2B3746] rounded-lg px-3 py-2 text-xs text-slate-300 focus:border-[#C5A880] focus:outline-none">
+                  <option value="all">كافة الحالات</option>
+                  <option value="new">جديد فقط</option>
+                  <option value="in_progress">قيد المعالجة</option>
+                  <option value="contacted">تم التواصل</option>
+                  <option value="completed">مكتمل</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Inquiries Table -->
+            <div class="overflow-x-auto rounded-lg border border-[#1F2733]">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>رقم الطلب</th>
+                    <th>الموكل / الجوال</th>
+                    <th>الخدمة المطلوبة</th>
+                    <th>الاستعجال</th>
+                    <th>الحالة</th>
+                    <th>تاريخ الورود</th>
+                    <th>الإجراءات</th>
+                  </tr>
+                </thead>
+                <tbody id="inquiriesTableBody">
+                  <!-- Dynamic Rows Rendered by app -->
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ==================== TAB 2: SCHEDULE & AVAILABILITY ==================== -->
+        <section id="tab-schedule" class="tab-content hidden space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- Left 5 Cols: General Availability Settings -->
+            <div class="lg:col-span-5 admin-card p-6 space-y-5">
+              <div>
+                <h3 class="font-bold text-base text-white">إعدادات استقبال الاستشارات</h3>
+                <p class="text-xs text-slate-400">تحديد أوقات الدوام وحالة استقبال الجلسات على الموقع</p>
+              </div>
+
+              <form id="scheduleGeneralForm" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">حالة التفرغ والاستقبال:</label>
+                  <select id="cfgScheduleStatus" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+                    <option value="available">متاحة ومستعدة لاستقبال الاستشارات (نشط) ✓</option>
+                    <option value="busy">مزدحمة حالياً (المواعيد خلال 48 ساعة)</option>
+                    <option value="urgent_only">استقبال الاستشارات الطارئة فقط</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">أيام العمل الأسبوعية:</label>
+                  <input type="text" id="cfgWorkingDays" placeholder="الأحد - الخميس" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">ساعات العمل اليومية المعتمدة:</label>
+                  <input type="text" id="cfgWorkingHours" placeholder="09:00 ص - 06:00 م" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit" class="btn-gold w-full py-2.5 rounded-lg text-xs font-bold shadow">
+                    حفظ حالة الاستقبال وأيام العمل
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Right 7 Cols: Individual Consultation Time Slots -->
+            <div class="lg:col-span-7 admin-card p-6 space-y-5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="font-bold text-base text-white">الفترات الزمنية المتاحة للحجز (Time Slots)</h3>
+                  <p class="text-xs text-slate-400">أوقات الجلسات الاستشارية المتاحة للموكلين للاختيار منها</p>
+                </div>
+                <button onclick="document.getElementById('addSlotModal').classList.add('active')" class="btn-gold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow">
+                  <i class="fa-solid fa-plus text-[10px]"></i>
+                  <span>إضافة فترة</span>
+                </button>
+              </div>
+
+              <!-- Slots List Container -->
+              <div id="scheduleSlotsContainer" class="space-y-2.5 max-h-[460px] overflow-y-auto pr-1">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================== TAB 3: BRANDING, LOGO & IMAGES ==================== -->
+        <section id="tab-branding" class="tab-content hidden space-y-6">
+          <form id="brandingSettingsForm" class="space-y-6">
+            
+            <!-- Logo Section Card -->
+            <div class="admin-card p-6 space-y-5">
+              <div class="border-b border-[#232F3E] pb-3">
+                <h3 class="font-bold text-base text-white">إعدادات الشعار وحجمه وعرضه (Logo Manager)</h3>
+                <p class="text-xs text-slate-400">التحكم في رابط صورة الشعار وحجم ارتفاعه وتأثير التعتيم اللوني</p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <!-- Logo Controls -->
+                <div class="md:col-span-7 space-y-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">رابط الشعار أو رفعه من الجهاز:</label>
+                    <div class="flex gap-2">
+                      <input type="text" id="cfgLogoUrl" placeholder="assets/images/logo.png أو رابط صورة" class="flex-1 bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+                      <label class="px-3 py-2 bg-[#1C2533] hover:bg-[#253245] text-[#C5A880] border border-[#3A495C] rounded-lg text-xs font-semibold cursor-pointer flex items-center gap-1.5 transition-colors flex-shrink-0" title="اختيار صورة من جهازك">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <span>رفع ملف</span>
+                        <input type="file" id="uploadLogoFile" accept="image/*" class="hidden">
+                      </label>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-300 mb-1.5">
+                      <span>ارتفاع وحجم الشعار:</span>
+                      <span id="cfgLogoHeightVal" class="text-[#C5A880] font-mono font-bold">56px</span>
+                    </div>
+                    <input type="range" id="cfgLogoHeight" min="32" max="110" step="2" class="w-full accent-[#C5A880] bg-[#1F2733] h-2 rounded-lg cursor-pointer">
+                    <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                      <span>صغير (32px)</span>
+                      <span>افتراضي (56px)</span>
+                      <span>كبير (110px)</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">نمط دمج ألوان الشعار (Blend Mode):</label>
+                    <select id="cfgLogoBlend" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+                      <option value="multiply">Multiply (دمج الخلفيات الفاتحة - المستحسن للشعار الحالي)</option>
+                      <option value="normal">Normal (عادي بدون دمج)</option>
+                      <option value="screen">Screen (للخلفيات الداكنة)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Logo Live Preview Box -->
+                <div class="md:col-span-5 flex flex-col items-center justify-center p-6 bg-[#121820] rounded-xl border border-[#2B3746] checker-pattern">
+                  <span class="text-[11px] text-slate-400 mb-3 font-semibold">معاينة مباشرة لحجم الشعار:</span>
+                  <div class="p-4 bg-white/95 rounded-xl border border-[#DFC39E] flex items-center justify-center shadow-lg min-h-[100px] w-full max-w-[220px]">
+                    <img id="adminLogoPreview" src="assets/images/logo.png" alt="معاينة الشعار" class="object-contain transition-all">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Website Images Card -->
+            <div class="admin-card p-6 space-y-5">
+              <div class="border-b border-[#232F3E] pb-3">
+                <h3 class="font-bold text-base text-white">إدارة وتغيير صور الموقع الرئيسية (Site Imagery)</h3>
+                <p class="text-xs text-slate-400">تعديل روابط ومسارات الصور الأساسية في الهيرو والنبذة أو رفع صور جديدة</p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Image 1: Hero Background -->
+                <div class="media-preview-card p-4 bg-[#141B24] space-y-3">
+                  <div class="h-36 rounded-lg overflow-hidden bg-cover bg-center border border-[#2B3746]" id="adminHeroPreview"></div>
+                  <div>
+                    <label class="block text-xs font-bold text-white mb-1">خلفية القسم الترحيبي (Hero BG)</label>
+                    <div class="flex gap-1.5">
+                      <input type="text" id="cfgHeroBgUrl" class="w-full bg-[#0E131A] border border-[#2B3746] rounded px-3 py-1.5 text-[11px] text-white focus:border-[#C5A880] focus:outline-none">
+                      <label class="px-2.5 py-1.5 bg-[#1C2533] hover:bg-[#253245] text-[#C5A880] border border-[#3A495C] rounded text-[11px] cursor-pointer flex items-center justify-center flex-shrink-0" title="رفع من الجهاز">
+                        <i class="fa-solid fa-upload"></i>
+                        <input type="file" id="uploadHeroFile" accept="image/*" class="hidden">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Image 2: Advisor Portrait -->
+                <div class="media-preview-card p-4 bg-[#141B24] space-y-3">
+                  <div class="h-36 rounded-lg overflow-hidden flex items-center justify-center bg-[#0E131A] border border-[#2B3746]">
+                    <img id="adminPortraitPreview" src="assets/images/portrait.jpg" class="h-full w-full object-cover">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-white mb-1">الصورة الشخصية للمستشارة (About)</label>
+                    <div class="flex gap-1.5">
+                      <input type="text" id="cfgPortraitUrl" class="w-full bg-[#0E131A] border border-[#2B3746] rounded px-3 py-1.5 text-[11px] text-white focus:border-[#C5A880] focus:outline-none">
+                      <label class="px-2.5 py-1.5 bg-[#1C2533] hover:bg-[#253245] text-[#C5A880] border border-[#3A495C] rounded text-[11px] cursor-pointer flex items-center justify-center flex-shrink-0" title="رفع من الجهاز">
+                        <i class="fa-solid fa-upload"></i>
+                        <input type="file" id="uploadPortraitFile" accept="image/*" class="hidden">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Image 3: Law Gavel & Books -->
+                <div class="media-preview-card p-4 bg-[#141B24] space-y-3">
+                  <div class="h-36 rounded-lg overflow-hidden flex items-center justify-center bg-[#0E131A] border border-[#2B3746]">
+                    <img id="adminGavelPreview" src="assets/images/law-gavel.jpg" class="h-full w-full object-cover">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-white mb-1">صورة المطرقة والمجلدات (Hero Card)</label>
+                    <div class="flex gap-1.5">
+                      <input type="text" id="cfgGavelUrl" class="w-full bg-[#0E131A] border border-[#2B3746] rounded px-3 py-1.5 text-[11px] text-white focus:border-[#C5A880] focus:outline-none">
+                      <label class="px-2.5 py-1.5 bg-[#1C2533] hover:bg-[#253245] text-[#C5A880] border border-[#3A495C] rounded text-[11px] cursor-pointer flex items-center justify-center flex-shrink-0" title="رفع من الجهاز">
+                        <i class="fa-solid fa-upload"></i>
+                        <input type="file" id="uploadGavelFile" accept="image/*" class="hidden">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2 flex justify-end">
+                <button type="submit" class="btn-gold px-8 py-2.5 rounded-lg text-xs font-bold shadow-lg">
+                  حفظ وتطبيق تغييرات الشعار والصور على الموقع فوراً
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </section>
+
+        <!-- ==================== TAB 4: SOCIAL MEDIA & CHANNELS ==================== -->
+        <section id="tab-social" class="tab-content hidden space-y-6">
+          <div class="admin-card p-6 max-w-3xl space-y-6">
+            <div class="border-b border-[#232F3E] pb-3">
+              <h3 class="font-bold text-base text-white">إدارة روابط التواصل الاجتماعي والقنوات الرسمية</h3>
+              <p class="text-xs text-slate-400">تحديث أرقام الواتساب وحسابات تويتر، سناب شات، لينكد إن، ولينك تري</p>
+            </div>
+
+            <form id="socialSettingsForm" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i>
+                    رقم الواتساب للاستشارات:
+                  </label>
+                  <input type="text" id="cfgSocWhatsApp" dir="ltr" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <i class="fa-regular fa-envelope text-[#C5A880] mr-1"></i>
+                    البريد الإلكتروني الرسمي:
+                  </label>
+                  <input type="email" id="cfgSocEmail" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <i class="fa-solid fa-link text-[#C5A880] mr-1"></i>
+                    رابط Linktree الموحد:
+                  </label>
+                  <input type="url" id="cfgSocLinktree" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <i class="fa-brands fa-x-twitter text-slate-300 mr-1"></i>
+                    رابط منصة X (تويتر):
+                  </label>
+                  <input type="url" id="cfgSocTwitter" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <i class="fa-brands fa-snapchat text-amber-400 mr-1"></i>
+                    رابط سناب شات:
+                  </label>
+                  <input type="url" id="cfgSocSnapchat" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <i class="fa-brands fa-linkedin-in text-sky-400 mr-1"></i>
+                    رابط لينكد إن:
+                  </label>
+                  <input type="url" id="cfgSocLinkedin" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2.5 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+                </div>
+              </div>
+
+              <div class="pt-3 flex justify-end">
+                <button type="submit" class="btn-gold px-8 py-2.5 rounded-lg text-xs font-bold shadow-lg">
+                  حفظ وتحديث قنوات التواصل
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- ==================== TAB 5: CLIENTS & TESTIMONIALS ==================== -->
+        <section id="tab-testimonials" class="tab-content hidden space-y-6">
+          <div class="admin-card p-6 space-y-5">
+            <div class="flex items-center justify-between border-b border-[#232F3E] pb-3">
+              <div>
+                <h3 class="font-bold text-base text-white">إدارة آراء وتقييمات الموكلين المعروضة على الموقع</h3>
+                <p class="text-xs text-slate-400">إضافة أو حذف تقييمات العملاء الموثقة التي تظهر في قسم آراء الموكلين</p>
+              </div>
+              <button onclick="document.getElementById('addTestimonialModal').classList.add('active')" class="btn-gold px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow">
+                <i class="fa-solid fa-plus text-xs"></i>
+                <span>إضافة رأي موكل جديد</span>
+              </button>
+            </div>
+
+            <!-- Testimonials Grid List -->
+            <div id="testimonialsListContainer" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== TAB 6: CASES & CLIENT PORTAL ==================== -->
+        <section id="tab-cases" class="tab-content hidden space-y-6">
+          <div class="admin-card p-5 space-y-4">
+            
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <div>
+                <h3 class="font-bold text-base text-white">إدارة مسارات قضايا الموكلين (Client Portal Sync)</h3>
+                <p class="text-xs text-slate-400">تحديث مراحل الإنجاز التي تظهر للموكلين مباشرة في صفحة الموقع الرئيسي</p>
+              </div>
+
+              <button onclick="document.getElementById('addCaseModal').classList.add('active')" class="btn-gold px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow">
+                <i class="fa-solid fa-plus text-xs"></i>
+                <span>إنشاء مسار معاملة برقم مرجع</span>
+              </button>
+            </div>
+
+            <!-- Cases Table -->
+            <div class="overflow-x-auto rounded-lg border border-[#1F2733]">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>رقم المرجع (Ref)</th>
+                    <th>الموكل / طبيعة المعاملة</th>
+                    <th>شريط ونسبة الإنجاز</th>
+                    <th>المرحلة الإجرائية</th>
+                    <th>آخر تحديث</th>
+                    <th>الإجراءات</th>
+                  </tr>
+                </thead>
+                <tbody id="casesTableBody">
+                  <!-- Dynamic Rows Rendered by app -->
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==================== MODALS ==================== -->
+  
+  <!-- MODAL: ADD TIME SLOT -->
+  <div id="addSlotModal" class="admin-modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="admin-modal-content bg-[#151C26] border border-[#C5A880]/50 rounded-2xl w-full max-w-md p-6 relative shadow-2xl text-right">
+      <button onclick="document.getElementById('addSlotModal').classList.remove('active')" class="absolute top-5 left-5 w-8 h-8 rounded-full bg-[#1A222E] hover:bg-[#253040] text-slate-400 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <h3 class="font-bold text-base text-white mb-4">إضافة موعد استشارة متاح جديد</h3>
+      <form id="addNewSlotForm" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">يوم الاستشارة:</label>
+          <select id="newSlotDay" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+            <option value="الأحد">الأحد</option>
+            <option value="الإثنين">الإثنين</option>
+            <option value="الثلاثاء">الثلاثاء</option>
+            <option value="الأربعاء">الأربعاء</option>
+            <option value="الخميس">الخميس</option>
+            <option value="السبت">السبت (استثنائي)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">الفترة الزمنية المحددة:</label>
+          <input type="text" id="newSlotTime" placeholder="مثال: 10:00 ص - 11:30 ص أو 04:30 م - 06:00 م" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+        </div>
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="document.getElementById('addSlotModal').classList.remove('active')" class="px-4 py-2 rounded-lg bg-[#141B24] text-xs font-medium text-slate-400 hover:text-white">إلغاء</button>
+          <button type="submit" class="btn-gold px-5 py-2 rounded-lg text-xs font-bold">إضافة الموعد</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD TESTIMONIAL -->
+  <div id="addTestimonialModal" class="admin-modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="admin-modal-content bg-[#151C26] border border-[#C5A880]/50 rounded-2xl w-full max-w-md p-6 relative shadow-2xl text-right">
+      <button onclick="document.getElementById('addTestimonialModal').classList.remove('active')" class="absolute top-5 left-5 w-8 h-8 rounded-full bg-[#1A222E] hover:bg-[#253040] text-slate-400 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <h3 class="font-bold text-base text-white mb-4">إضافة تقييم موكل جديد</h3>
+      <form id="addTestimonialForm" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">اسم الموكل:</label>
+          <input type="text" id="newTestName" placeholder="مثال: م. سلطان الدوسري" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">الصفة أو المسمى الوظيفي:</label>
+          <input type="text" id="newTestRole" placeholder="مثال: رائد أعمال / مدير شركة" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">التقييم بالنجوم:</label>
+          <select id="newTestRating" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+            <option value="5">⭐⭐⭐⭐⭐ (5 نجوم - ممتاز)</option>
+            <option value="4">⭐⭐⭐⭐ (4 نجوم - جيد جداً)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">نص الشهادة أو الرأي:</label>
+          <textarea id="newTestText" rows="3" placeholder="اكتب نص تقييم الموكل..." class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none resize-none" required></textarea>
+        </div>
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="document.getElementById('addTestimonialModal').classList.remove('active')" class="px-4 py-2 rounded-lg bg-[#141B24] text-xs font-medium text-slate-400 hover:text-white">إلغاء</button>
+          <button type="submit" class="btn-gold px-5 py-2 rounded-lg text-xs font-bold">إضافة ونشر</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: VIEW DETAILS -->
+  <div id="inquiryDetailsModal" class="admin-modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="admin-modal-content bg-[#151C26] border border-[#C5A880]/50 rounded-2xl w-full max-w-lg p-6 relative shadow-2xl">
+      <button id="closeDetailsModal" class="absolute top-5 left-5 w-8 h-8 rounded-full bg-[#1A222E] hover:bg-[#253040] text-slate-400 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+      <div id="inquiryDetailsContent"></div>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD INQUIRY -->
+  <div id="addInquiryModal" class="admin-modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="admin-modal-content bg-[#151C26] border border-[#C5A880]/50 rounded-2xl w-full max-w-lg p-6 relative shadow-2xl text-right">
+      <button onclick="document.getElementById('addInquiryModal').classList.remove('active')" class="absolute top-5 left-5 w-8 h-8 rounded-full bg-[#1A222E] hover:bg-[#253040] text-slate-400 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <h3 class="font-bold text-base text-white mb-4">تسجيل طلب استشارة يدوي جديد</h3>
+      <form id="addInquiryForm" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">اسم الموكل *</label>
+          <input type="text" id="newInqName" placeholder="عبدالله الشريف" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">رقم الجوال / واتساب *</label>
+          <input type="tel" id="newInqPhone" dir="ltr" placeholder="+9665XXXXXXXX" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">البريد الإلكتروني (اختياري)</label>
+          <input type="email" id="newInqEmail" placeholder="client@example.com" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">نوع الخدمة</label>
+            <select id="newInqService" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+              <option value="تقديم الاستشارات القانونية">تقديم الاستشارات القانونية</option>
+              <option value="دراسة وتحليل القضايا">دراسة وتحليل القضايا</option>
+              <option value="صياغة وتوثيق العقود">صياغة وتوثيق العقود</option>
+              <option value="صياغة لائحة اعتراضية">صياغة لائحة اعتراضية</option>
+              <option value="رفع ومتابعة طلبات التنفيذ">رفع ومتابعة طلبات التنفيذ</option>
+              <option value="أخرى">خدمة وبحث قانوني آخر</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">الاستعجال</label>
+            <select id="newInqUrgency" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none">
+              <option value="normal">عادي</option>
+              <option value="urgent">عاجل (24-48 ساعة)</option>
+              <option value="same-day">فوري نفس اليوم</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">موجز الطلب / القضية</label>
+          <textarea id="newInqDetails" rows="3" placeholder="موجز تفاصيل النزاع أو المستندات..." class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none resize-none"></textarea>
+        </div>
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="document.getElementById('addInquiryModal').classList.remove('active')" class="px-4 py-2 rounded-lg bg-[#141B24] text-xs font-medium text-slate-400 hover:text-white">إلغاء</button>
+          <button type="submit" class="btn-gold px-5 py-2 rounded-lg text-xs font-bold">حفظ الطلب</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD CASE -->
+  <div id="addCaseModal" class="admin-modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="admin-modal-content bg-[#151C26] border border-[#C5A880]/50 rounded-2xl w-full max-w-lg p-6 relative shadow-2xl text-right">
+      <button onclick="document.getElementById('addCaseModal').classList.remove('active')" class="absolute top-5 left-5 w-8 h-8 rounded-full bg-[#1A222E] hover:bg-[#253040] text-slate-400 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <h3 class="font-bold text-base text-white mb-4">إنشاء مسار معاملة برقم مرجعي</h3>
+      <form id="addCaseForm" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">رقم المرجع (الكود) *</label>
+          <input type="text" id="newCaseRef" placeholder="مثال: SH-2025-04" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white uppercase focus:border-[#C5A880] focus:outline-none" required>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">اسم الموكل / المنشأة *</label>
+          <input type="text" id="newCaseClient" placeholder="شركة المجد للمقاولات" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">طبيعة المعاملة / الخدمة *</label>
+          <input type="text" id="newCaseService" placeholder="صياغة لائحة جوابية ونقض أمام المحكمة العليا" class="w-full bg-[#0E131A] border border-[#2B3746] rounded-lg px-3.5 py-2 text-xs text-white focus:border-[#C5A880] focus:outline-none" required>
+        </div>
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="document.getElementById('addCaseModal').classList.remove('active')" class="px-4 py-2 rounded-lg bg-[#141B24] text-xs font-medium text-slate-400 hover:text-white">إلغاء</button>
+          <button type="submit" class="btn-gold px-5 py-2 rounded-lg text-xs font-bold">إنشاء وتفعيل</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin System Logic -->
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+/* ==========================================================================
+   موقع المستشارة القانونية شهد إبراهيم محرم | Luxury Legal Stylesheet & FX
+   ========================================================================== */
+
+:root {
+  --color-brand-dark: #0E1217;
+  --color-brand-surface: #151A21;
+  --color-brand-card: #1C232C;
+  --color-brand-accent: #C5A880;
+  --color-brand-accent-hover: #D5BA93;
+  --color-brand-gold-light: #E5D6C1;
+  --color-brand-gold-dark: #9C7A4A;
+  --color-brand-muted: #8A99AD;
+  --color-brand-border: #26303C;
+  --color-brand-light-bg: #FAF7F0;
+  --color-brand-light-surface: #F5F2EB;
+  
+  --font-sans: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Amiri', Georgia, serif;
+  --font-display: 'Cinzel', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #0E1217;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A3644;
+  border-radius: 4px;
+  border: 2px solid #0E1217;
+  transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A880;
+}
+
+/* Base Polish */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-dark);
+  color: #E2E8F0;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+.font-serif-title {
+  font-family: var(--font-serif);
+}
+
+.font-display-title {
+  font-family: var(--font-display);
+}
+
+/* ==========================================================================
+   1. Interactive Mouse Glow Follower (هالة الإضاءة التفاعلية)
+   ========================================================================== */
+#cursorGlow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(197, 168, 128, 0.08) 0%, rgba(197, 168, 128, 0.02) 40%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  transition: opacity 0.4s ease, transform 0.1s ease-out;
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 768px) {
+  #cursorGlow {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   2. Canvas Golden Ambient Particles in Hero
+   ========================================================================== */
+#heroParticlesCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   3. Scroll-Reveal System (أنظمة الظهور الحركي مع التمرير)
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal.reveal-scale {
+  transform: scale(0.92) translateY(20px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* ==========================================================================
+   4. 3D Tilt & Magnetic Interactive Cards
+   ========================================================================== */
+.tilt-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card:hover {
+  border-color: rgba(197, 168, 128, 0.65) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 24px rgba(197, 168, 128, 0.16);
+}
+
+/* Luxury Accents and Glows */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(197, 168, 128, 0.2);
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(197, 168, 128, 0.25);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-border-glow:hover {
+  border-color: rgba(197, 168, 128, 0.7);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.6), 0 0 22px rgba(197, 168, 128, 0.18);
+  transform: translateY(-4px);
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #C5A880 0%, #A3804F 50%, #86663B 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Border Light Beam on Golden Form */
+.border-beam-container {
+  position: relative;
+}
+
+.border-beam-container::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 1.15rem;
+  padding: 2px;
+  background: linear-gradient(90deg, transparent 20%, #C5A880 50%, #FFF5E1 60%, transparent 80%);
+  background-size: 200% 200%;
+  animation: borderBeam 5s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes borderBeam {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF9EF 0%, #E5D6C1 40%, #C5A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: textShimmer 6s ease infinite;
+}
+
+@keyframes textShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-pattern {
+  background-image: radial-gradient(rgba(197, 168, 128, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.glass-nav {
+  background: rgba(250, 247, 242, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.35s ease;
+}
+
+.glass-card-dark {
+  background: rgba(21, 26, 33, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+/* ==========================================================================
+   5. Button Shimmer & Gloss Effects
+   ========================================================================== */
+.btn-luxury {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-luxury::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.75s ease;
+}
+
+.btn-luxury:hover::after {
+  left: 130%;
+}
+
+.btn-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(197, 168, 128, 0.35);
+}
+
+.btn-luxury:active {
+  transform: translateY(0);
+}
+
+/* Click Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleAnimation 0.6s linear;
+  background-color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Shimmer Animation on Highlights */
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.badge-shimmer {
+  background: linear-gradient(90deg, rgba(197,168,128,0.12) 0%, rgba(197,168,128,0.4) 50%, rgba(197,168,128,0.12) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3.5s infinite linear;
+}
+
+/* ==========================================================================
+   6. Statistics Counter Section (شريط الإحصائيات الفخم)
+   ========================================================================== */
+.stat-box {
+  background: rgba(21, 26, 33, 0.6);
+  border: 1px solid rgba(197, 168, 128, 0.18);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.stat-box:hover {
+  background: rgba(21, 26, 33, 0.95);
+  border-color: rgba(197, 168, 128, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 18px rgba(197, 168, 128, 0.15);
+}
+
+/* Interactive Modal */
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Floating WhatsApp Pulsing */
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35); }
+  50% { transform: scale(1.08); box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6); }
+}
+
+.pulse-wa {
+  animation: pulseSubtle 2.8s infinite ease-in-out;
+}
+
+/* Service Card Filter Transitions */
+.service-item-wrapper {
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-item-wrapper.hidden-filter {
+  opacity: 0;
+  transform: scale(0.9);
+  display: none !important;
+}
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  transform: translateY(140%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast.show {
+  transform: translateY(0);
+}
