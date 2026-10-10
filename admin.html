@@ -103,7 +103,13 @@
           <span class="text-xs text-slate-400" id="adminLiveClock"></span>
         </div>
 
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2.5">
+          <!-- Theme Toggle Button -->
+          <button type="button" id="adminThemeToggle" class="px-3 py-1.5 rounded-lg bg-[#18202A] hover:bg-[#202936] text-slate-200 border border-[#2B3746] text-xs font-semibold flex items-center gap-1.5 transition-colors" title="تبديل المظهر (ليلي / نهاري)">
+            <i class="fa-solid fa-moon text-[#C5A880]"></i>
+            <span id="adminThemeToggleText" class="hidden sm:inline">الوضع الليلي</span>
+          </button>
+
           <button onclick="document.getElementById('addInquiryModal').classList.add('active')" class="btn-gold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 shadow">
             <i class="fa-solid fa-plus text-xs"></i>
             <span>إضافة استشارة يدوية</span>
@@ -111,7 +117,7 @@
           
           <button onclick="exportInquiriesCSV()" class="px-3.5 py-1.5 rounded-lg bg-[#18202A] hover:bg-[#202936] text-slate-200 border border-[#2B3746] text-xs font-semibold flex items-center gap-1.5 transition-colors">
             <i class="fa-solid fa-file-export text-xs text-[#C5A880]"></i>
-            <span>تصدير CSV</span>
+            <span class="hidden sm:inline">تصدير CSV</span>
           </button>
         </div>
       </header>

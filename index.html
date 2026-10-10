@@ -91,6 +91,12 @@
           <i class="fa-solid fa-lock text-[10px]"></i>
           <span>لوحة التحكم</span>
         </a>
+        <span class="text-[#DFC39E] hidden sm:inline">|</span>
+        <!-- Theme Switcher in TopBar -->
+        <button type="button" class="theme-toggle-btn" aria-label="تبديل الوضع الليلي والنهاري" title="تبديل المظهر">
+          <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+          <span class="theme-toggle-text">الوضع الليلي</span>
+        </button>
       </div>
     </div>
   </div>
@@ -98,7 +104,7 @@
 
   <!-- ==================== BEGIN: Main Header ==================== -->
   <header class="sticky top-0 z-50 glass-nav border-b border-[#E5DAC8] shadow-md transition-all duration-300" data-purpose="site-header">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-2.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-2">
       <div class="flex items-center justify-between">
         
         <!-- Right Wing Nav (RTL) -->
@@ -112,45 +118,97 @@
         <!-- CENTER: Luxury Emblem Logo -->
         <div class="text-center py-0.5">
           <a class="group inline-flex flex-col items-center py-1 transition-all duration-300" href="#hero">
-            <img src="assets/images/logo.png" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCdjliIrU33Qt-UzmhVsRtCR4cdbwOeA93kWTJZRtA7ClJ4MRURUbPISxQ6Oc2Na7hnvOsznKujMe8wiqE9zxq7vvtDgN7LuiRTFZTl-rPNc3374juHw0GJcDJYM1Xv2m6zntwGpIOwDLRTM1xTBMuoX3VDdSE4S-RnC7dTvlj2u1tnpvbML3L296-4THNmDX-bjoONq0KwZknDgZeoDuniSyeIe4XuUoHBcEjhTo8KQyyuzQq5PA9blsPJgsenhx_aZg'" alt="شهد إبراهيم محرم - مستشارة وباحثة قانونية" class="h-14 w-auto object-contain group-hover:scale-110 transition-transform duration-500" style="mix-blend-mode: multiply;">
+            <img src="assets/images/logo.png" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCdjliIrU33Qt-UzmhVsRtCR4cdbwOeA93kWTJZRtA7ClJ4MRURUbPISxQ6Oc2Na7hnvOsznKujMe8wiqE9zxq7vvtDgN7LuiRTFZTl-rPNc3374juHw0GJcDJYM1Xv2m6zntwGpIOwDLRTM1xTBMuoX3VDdSE4S-RnC7dTvlj2u1tnpvbML3L296-4THNmDX-bjoONq0KwZknDgZeoDuniSyeIe4XuUoHBcEjhTo8KQyyuzQq5PA9blsPJgsenhx_aZg'" alt="شهد إبراهيم محرم - مستشارة وباحثة قانونية" class="h-11 sm:h-12 lg:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-500" style="mix-blend-mode: multiply;">
           </a>
         </div>
 
         <!-- Left Wing Nav (RTL) & Action Button -->
-        <div class="hidden lg:flex items-center gap-5">
+        <div class="hidden lg:flex items-center gap-4">
           <nav class="flex items-center gap-5 text-sm font-semibold text-slate-800" data-purpose="nav-left-side">
             <a class="hover:text-[#9C7A4A] transition-colors py-1 border-b-2 border-transparent hover:border-[#9C7A4A] text-slate-800" href="#portal">بوابة الموكلين</a>
             <a class="hover:text-[#9C7A4A] transition-colors py-1 border-b-2 border-transparent hover:border-[#9C7A4A] text-slate-800" href="#consultation-quote">طلب استشارة</a>
             <a class="hover:text-[#9C7A4A] transition-colors py-1 border-b-2 border-transparent hover:border-[#9C7A4A] text-slate-800" href="#testimonials">آراء الموكلين</a>
             <a class="hover:text-[#9C7A4A] transition-colors py-1 border-b-2 border-transparent hover:border-[#9C7A4A] text-slate-800" href="#faq">الأسئلة الشائعة</a>
           </nav>
+          
+          <!-- Theme Switcher Desktop -->
+          <button type="button" class="theme-toggle-btn" aria-label="تبديل الوضع">
+            <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+            <span class="theme-toggle-text text-[11px]">الوضع</span>
+          </button>
+
           <a class="btn-luxury px-5 py-2.5 rounded bg-[#0E1217] hover:bg-[#1C232C] text-[#E5D6C1] border border-[#C5A880]/60 font-bold text-xs uppercase tracking-wide transition-all shadow-md flex items-center gap-2" href="#consultation-quote">
             <i class="fa-regular fa-calendar-check text-[#C5A880]"></i>
             <span>حجز استشارة</span>
           </a>
         </div>
 
-        <!-- Mobile Hamburger Toggle -->
-        <button aria-label="فتح القائمة" class="lg:hidden text-slate-800 hover:text-[#9C7A4A] p-2 rounded focus:outline-none transition-colors" id="mobile-menu-toggle" type="button">
-          <i class="fa-solid fa-bars text-2xl"></i>
-        </button>
+        <!-- Mobile Header Controls (Theme Button + Hamburger) -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button type="button" class="theme-toggle-btn p-2" aria-label="تبديل المظهر (ليلي / نهاري)" title="تبديل المظهر">
+            <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+          </button>
+          
+          <button aria-label="فتح القائمة" class="text-slate-800 hover:text-[#9C7A4A] p-2 rounded focus:outline-none transition-colors" id="mobile-menu-toggle" type="button" aria-expanded="false">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
       </div>
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div class="hidden lg:hidden border-t border-[#E5DAC8] bg-[#FAF7F0] px-6 py-5 space-y-3 shadow-lg" id="mobile-menu">
-      <a class="block text-sm py-2 text-[#9C7A4A] font-bold" href="#hero">الرئيسية</a>
-      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#about">نبذة عن المستشارة</a>
-      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#services">الخدمات القانونية</a>
-      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#calculator">حاسبة الأتعاب</a>
-      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#portal">بوابة الموكلين ومتابعة المعاملات</a>
-      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#consultation-quote">طلب استشارة</a>
-      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#testimonials">آراء الموكلين</a>
-      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#faq">الأسئلة الشائعة</a>
-      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#contact">تواصل معنا</a>
-      <a class="btn-luxury inline-block mt-3 w-full text-center py-3 rounded bg-[#0E1217] text-[#E5D6C1] border border-[#C5A880]/60 font-bold text-sm shadow-md" href="#consultation-quote">
-        حجز موعد استشارة
+    <div class="hidden lg:hidden border-t border-[#E5DAC8] bg-[#FAF7F0] px-6 py-5 space-y-2 shadow-xl transition-all duration-300" id="mobile-menu">
+      <!-- Quick Theme Switch row in drawer -->
+      <div class="flex items-center justify-between pb-3 border-b border-[#E5DAC8]">
+        <span class="text-xs font-bold text-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-circle-half-stroke text-[#9C7A4A]"></i>
+          <span>مظهر الموقع:</span>
+        </span>
+        <button type="button" class="theme-toggle-btn" aria-label="تبديل الوضع">
+          <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+          <span class="theme-toggle-text">الوضع الليلي</span>
+        </button>
+      </div>
+
+      <a class="block text-sm py-2 text-[#9C7A4A] font-bold" href="#hero">
+        <i class="fa-solid fa-house ml-2 text-xs"></i>
+        <span>الرئيسية</span>
       </a>
+      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#about">
+        <i class="fa-solid fa-user-tie ml-2 text-xs"></i>
+        <span>نبذة عن المستشارة</span>
+      </a>
+      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#services">
+        <i class="fa-solid fa-scale-balanced ml-2 text-xs"></i>
+        <span>الخدمات القانونية</span>
+      </a>
+      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#calculator">
+        <i class="fa-solid fa-calculator ml-2 text-xs"></i>
+        <span>حاسبة الأتعاب</span>
+      </a>
+      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#portal">
+        <i class="fa-solid fa-folder-tree ml-2 text-xs"></i>
+        <span>بوابة الموكلين ومتابعة المعاملات</span>
+      </a>
+      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#consultation-quote">
+        <i class="fa-solid fa-calendar-check ml-2 text-xs"></i>
+        <span>طلب استشارة فورية</span>
+      </a>
+      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#testimonials">
+        <i class="fa-solid fa-star ml-2 text-xs text-amber-500"></i>
+        <span>آراء الموكلين</span>
+      </a>
+      <a class="block text-sm py-2 text-slate-800 hover:text-[#9C7A4A] font-medium" href="#faq">
+        <i class="fa-solid fa-circle-question ml-2 text-xs"></i>
+        <span>الأسئلة الشائعة</span>
+      </a>
+      
+      <div class="pt-2">
+        <a class="btn-luxury block w-full text-center py-3 rounded-lg bg-[#0E1217] text-[#E5D6C1] border border-[#C5A880]/60 font-bold text-sm shadow-md" href="#consultation-quote">
+          <i class="fa-regular fa-calendar-check ml-1.5 text-[#C5A880]"></i>
+          <span>حجز موعد استشارة الآن</span>
+        </a>
+      </div>
     </div>
   </header>
   <!-- ==================== END: Main Header ==================== -->
@@ -1084,14 +1142,38 @@
   </div>
 
   <!-- ==================== Floating WhatsApp CTA ==================== -->
-  <a href="https://wa.me/?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A1%D9%8A%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-2xl pulse-wa hover:scale-110 transition-transform" aria-label="واتساب مباشر">
+  <a href="https://wa.me/?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A1%D9%8A%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener noreferrer" class="fixed bottom-20 md:bottom-6 right-5 md:right-6 z-40 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-xl md:text-2xl shadow-2xl pulse-wa hover:scale-110 transition-transform" aria-label="واتساب مباشر">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <!-- ==================== Scroll to Top Button ==================== -->
-  <button id="scrollTopBtn" class="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full bg-[#18202A] text-[#C5A880] border border-[#C5A880]/40 flex items-center justify-center shadow-lg opacity-0 pointer-events-none hover:bg-[#C5A880] hover:text-[#0E1217] transition-all" aria-label="العودة للأعلى">
-    <i class="fa-solid fa-arrow-up text-sm"></i>
+  <button id="scrollTopBtn" class="fixed bottom-20 md:bottom-6 left-5 md:left-6 z-40 w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#18202A] text-[#C5A880] border border-[#C5A880]/40 flex items-center justify-center shadow-lg opacity-0 pointer-events-none hover:bg-[#C5A880] hover:text-[#0E1217] transition-all" aria-label="العودة للأعلى">
+    <i class="fa-solid fa-arrow-up text-xs md:text-sm"></i>
   </button>
+
+  <!-- ==================== Mobile Bottom Floating Nav Bar (شريط التنقل السريع للجوال) ==================== -->
+  <nav id="mobileBottomNav" aria-label="شريط الوصول السريع للجوال">
+    <a href="#hero" class="mobile-bottom-link active">
+      <i class="fa-solid fa-house"></i>
+      <span>الرئيسية</span>
+    </a>
+    <a href="#services" class="mobile-bottom-link">
+      <i class="fa-solid fa-scale-balanced"></i>
+      <span>الخدمات</span>
+    </a>
+    <a href="#consultation-quote" class="mobile-bottom-link mobile-bottom-cta">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>حجز موعد</span>
+    </a>
+    <a href="#portal" class="mobile-bottom-link">
+      <i class="fa-solid fa-folder-open"></i>
+      <span>المتابعة</span>
+    </a>
+    <button type="button" class="mobile-bottom-link theme-toggle-btn border-0 p-0 text-slate-400" style="background:transparent;border:none;">
+      <i class="fa-solid fa-moon"></i>
+      <span>المظهر</span>
+    </button>
+  </nav>
 
   <!-- Application Logic -->
   <script src="js/app.js"></script>

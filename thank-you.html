@@ -87,6 +87,12 @@
       </a>
 
       <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn" id="thankYouThemeToggle" aria-label="تبديل الوضع">
+          <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+          <span class="theme-toggle-text text-[11px] hidden sm:inline">الوضع الليلي</span>
+        </button>
+
         <a href="index.html" class="px-3.5 py-1.5 rounded-lg bg-[#161D27] hover:bg-[#202937] text-slate-300 text-xs font-semibold border border-[#2B3746] transition-colors flex items-center gap-1.5">
           <i class="fa-solid fa-arrow-right text-[10px]"></i>
           <span>العودة للرئيسية</span>
@@ -409,6 +415,44 @@
         glow.style.opacity = '0';
       });
     }
+
+    // إدارة الثيم في صفحة الشكر
+    (function applyTheme() {
+      const savedTheme = localStorage.getItem('shahd_theme') || 'dark';
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      }
+
+      const btn = document.getElementById('thankYouThemeToggle');
+      if (btn) {
+        const isLight = document.documentElement.classList.contains('light');
+        const icon = btn.querySelector('i');
+        const text = btn.querySelector('.theme-toggle-text');
+        if (icon) icon.className = isLight ? 'fa-solid fa-sun text-amber-500' : 'fa-solid fa-moon text-[#C5A880]';
+        if (text) text.textContent = isLight ? 'الوضع النهاري' : 'الوضع الليلي';
+
+        btn.addEventListener('click', () => {
+          const currentlyLight = document.documentElement.classList.contains('light');
+          if (currentlyLight) {
+            document.documentElement.classList.remove('light');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('shahd_theme', 'dark');
+            if (icon) icon.className = 'fa-solid fa-moon text-[#C5A880]';
+            if (text) text.textContent = 'الوضع الليلي';
+          } else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('shahd_theme', 'light');
+            if (icon) icon.className = 'fa-solid fa-sun text-amber-500';
+            if (text) text.textContent = 'الوضع النهاري';
+          }
+        });
+      }
+    })();
   </script>
 </body>
 </html>

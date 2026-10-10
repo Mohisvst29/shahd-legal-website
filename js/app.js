@@ -126,8 +126,21 @@ const SERVICES_DATA = {
   }
 };
 
+// تطبيق المظهر المفضل فوراً لمنع وميض الشاشة (Flash of Unstyled Theme)
+(function applyInitialTheme() {
+  const savedTheme = localStorage.getItem('shahd_theme') || 'dark';
+  if (savedTheme === 'light') {
+    document.documentElement.classList.add('light');
+    document.documentElement.classList.remove('dark');
+  } else {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+  }
+})();
+
 // تهيئة التطبيق عند اكتمال تحميل المستند
 document.addEventListener("DOMContentLoaded", () => {
+  initThemeMode();
   applyDynamicSiteConfig();
   initCursorGlow();
   initHeroParticles();
@@ -579,7 +592,7 @@ function initNavbar() {
 }
 
 /* -------------------------------------------------------------
-   9. القائمة الجانبية للشاشات الصغيرة
+   9. القائمة الجانبية للشاشات الصغيرة والتحكم المتجاوب للجوال
    ------------------------------------------------------------- */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobile-menu-toggle');
@@ -587,15 +600,99 @@ function initMobileMenu() {
 
   if (!toggleBtn || !menu) return;
 
-  toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-    const isExpanded = !menu.classList.contains('hidden');
-    toggleBtn.setAttribute('aria-expanded', isExpanded);
+  function closeMenu() {
+    menu.classList.add('hidden');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    const icon = toggleBtn.querySelector('i');
+    if (icon) icon.className = 'fa-solid fa-bars text-2xl';
+  }
+
+  function openMenu() {
+    menu.classList.remove('hidden');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    const icon = toggleBtn.querySelector('i');
+    if (icon) icon.className = 'fa-solid fa-xmark text-2xl';
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isHidden = menu.classList.contains('hidden');
+    if (isHidden) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
   });
 
   menu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      menu.classList.add('hidden');
+      closeMenu();
+    });
+  });
+
+  // إغلاق القائمة عند النقر خارجها
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !toggleBtn.contains(e.target) && !menu.classList.contains('hidden')) {
+      closeMenu();
+    }
+  });
+
+  // إغلاق القائمة بمفتاح Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+      closeMenu();
+    }
+  });
+}
+
+/* -------------------------------------------------------------
+   9.1 نظام التبديل بين الوضع الليلي والوضع النهاري (Light & Dark Mode)
+   ------------------------------------------------------------- */
+function initThemeMode() {
+  const toggleButtons = document.querySelectorAll('.theme-toggle-btn, [data-action="toggle-theme"]');
+
+  function updateThemeUI(isLight) {
+    toggleButtons.forEach(btn => {
+      const icon = btn.querySelector('.theme-icon i') || btn.querySelector('i');
+      const text = btn.querySelector('.theme-toggle-text');
+      if (icon) {
+        if (isLight) {
+          icon.className = 'fa-solid fa-sun text-amber-500';
+        } else {
+          icon.className = 'fa-solid fa-moon text-[#C5A880]';
+        }
+      }
+      if (text) {
+        text.textContent = isLight ? 'الوضع النهاري' : 'الوضع الليلي';
+      }
+      btn.setAttribute('title', isLight ? 'التبديل إلى الوضع الليلي' : 'التبديل إلى الوضع النهاري');
+      btn.setAttribute('aria-label', isLight ? 'التبديل إلى الوضع الليلي' : 'التبديل إلى الوضع النهاري');
+    });
+  }
+
+  // مزامنة حالة الأزرار مع الوضع الحالي
+  const isCurrentlyLight = document.documentElement.classList.contains('light');
+  updateThemeUI(isCurrentlyLight);
+
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentIsLight = document.documentElement.classList.contains('light');
+      const nextIsLight = !currentIsLight;
+
+      if (nextIsLight) {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('shahd_theme', 'light');
+        showToast('تم تفعيل الوضع النهاري الفاخر ☀️');
+      } else {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('shahd_theme', 'dark');
+        showToast('تم تفعيل الوضع الليلي الملكي 🌙');
+      }
+
+      updateThemeUI(nextIsLight);
     });
   });
 }

@@ -172,8 +172,21 @@ function saveCases() {
   localStorage.setItem('shahd_cases', JSON.stringify(cases));
 }
 
+// تطبيق المظهر المفضل فوراً لمنع وميض الشاشة
+(function applyInitialAdminTheme() {
+  const savedTheme = localStorage.getItem('shahd_theme') || 'dark';
+  if (savedTheme === 'light') {
+    document.documentElement.classList.add('light');
+    document.documentElement.classList.remove('dark');
+  } else {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+  }
+})();
+
 // تهيئة اللوحة عند التشغيل
 document.addEventListener("DOMContentLoaded", () => {
+  initAdminTheme();
   renderStats();
   renderInquiriesTable();
   renderCasesTable();
@@ -190,6 +203,42 @@ document.addEventListener("DOMContentLoaded", () => {
   initScheduleForm();
   initBrandingEvents();
 });
+
+function initAdminTheme() {
+  const btn = document.getElementById('adminThemeToggle');
+  const text = document.getElementById('adminThemeToggleText');
+  if (!btn) return;
+
+  function updateAdminThemeUI(isLight) {
+    const icon = btn.querySelector('i');
+    if (icon) {
+      icon.className = isLight ? 'fa-solid fa-sun text-amber-500' : 'fa-solid fa-moon text-[#C5A880]';
+    }
+    if (text) {
+      text.textContent = isLight ? 'الوضع النهاري' : 'الوضع الليلي';
+    }
+  }
+
+  updateAdminThemeUI(document.documentElement.classList.contains('light'));
+
+  btn.addEventListener('click', () => {
+    const currentIsLight = document.documentElement.classList.contains('light');
+    const nextIsLight = !currentIsLight;
+
+    if (nextIsLight) {
+      document.documentElement.classList.add('light');
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('shahd_theme', 'light');
+      showToast('تم تفعيل الوضع النهاري للوحة الإدارة ☀️');
+    } else {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('shahd_theme', 'dark');
+      showToast('تم تفعيل الوضع الليلي للوحة الإدارة 🌙');
+    }
+    updateAdminThemeUI(nextIsLight);
+  });
+}
 
 /* -------------------------------------------------------------
    1. الإحصائيات والمؤشرات
